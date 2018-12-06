@@ -40,7 +40,7 @@
 }
 
 -(instancetype)initWithComparator:(NSComparator)comparator
-                        withArray:(NSArray*)originalArray
+                         contents:(NSArray*)originalArray
      isOriginalArrayAlreadySorted:(BOOL)isOriginalArrayAlreadySorted
 {
     self = [super init];
@@ -112,7 +112,7 @@
 {
     Class class = [self class];
     ATSortedMutableArray *sortedCopy = [[class alloc]initWithComparator:self.comparator
-                                                              withArray:[_backingArray copy]
+                                                               contents:[_backingArray copy]
                                            isOriginalArrayAlreadySorted:YES];
     return sortedCopy;
 }

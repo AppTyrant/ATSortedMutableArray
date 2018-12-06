@@ -21,7 +21,7 @@
  @return An ATSortedMutableArray instance.
  */
 -(nonnull instancetype)initWithComparator:(NSComparator _Nonnull)comparator
-                                withArray:(nonnull NSArray*)originalArray
+                                 contents:(nonnull NSArray*)originalArray
              isOriginalArrayAlreadySorted:(BOOL)isOriginalArrayAlreadySorted NS_DESIGNATED_INITIALIZER;
 
 /**
