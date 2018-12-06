@@ -27,6 +27,14 @@
     return [[self alloc]initWithComparator:comparator capacity:0];
 }
 
++(ATSortedMutableArray*)sortedArrayWithSortedArray:(ATSortedMutableArray*)otherSortedArray
+                                        comparator:(NSComparator)comparator
+{
+    return [[self alloc]initWithComparator:comparator
+                                  contents:otherSortedArray.nsArrayRepresentation
+              isOriginalArrayAlreadySorted:NO];
+}
+
 -(instancetype)initWithComparator:(NSComparator)comparator
                          capacity:(NSUInteger)capacity
 {

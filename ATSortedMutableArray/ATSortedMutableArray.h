@@ -35,6 +35,12 @@
  */
 +(nonnull ATSortedMutableArray*)sortedArrayWithComparator:(NSComparator _Nonnull)comparator;
 
+/**
+ Creates and returns a new ATSortedMutableArray using the contents of another ATSortedMutableArray instance.
+ */
++(ATSortedMutableArray*)sortedArrayWithSortedArray:(ATSortedMutableArray*)otherSortedArray
+                                        comparator:(NSComparator)comparator;
+
 -(nonnull instancetype)init NS_UNAVAILABLE;
 
 @property (nonatomic,readonly,copy) NSComparator _Nonnull comparator;
