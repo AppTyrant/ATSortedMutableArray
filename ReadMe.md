@@ -19,4 +19,4 @@ To add an object to the array you use the addObject: method.
 -(NSUInteger)addObject:(nonnull ObjectType)objectToInsert;
 ```
 
-This makes it easy to create a sorted collection that will automatically enforce a given sort policy as objects are added.
+This makes it easy to create a sorted collection that will automatically enforce a given sort policy as objects are added. See ATSortedMutableArray.h for more.
