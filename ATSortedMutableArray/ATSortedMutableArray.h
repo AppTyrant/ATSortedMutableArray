@@ -38,8 +38,8 @@
 /**
  Creates and returns a new ATSortedMutableArray using the contents of another ATSortedMutableArray instance.
  */
-+(ATSortedMutableArray*)sortedArrayWithSortedArray:(ATSortedMutableArray*)otherSortedArray
-                                        comparator:(NSComparator)comparator;
++(nonnull ATSortedMutableArray*)sortedArrayWithSortedArray:(nonnull ATSortedMutableArray*)otherSortedArray
+                                                comparator:(NSComparator _Nonnull)comparator;
 
 -(nonnull instancetype)init NS_UNAVAILABLE;
 
