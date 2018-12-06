@@ -303,3 +303,11 @@
 
 @end
 
+@implementation ATSortedMutableArray(SaveToFile)
+
+-(BOOL)writeToURL:(NSURL*)url error:(NSError**)error
+{
+    return [_backingArray writeToURL:url error:error];
+}
+
+@end

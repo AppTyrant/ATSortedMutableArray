@@ -220,3 +220,10 @@
 -(void)removeObjectsInRange:(NSRange)range;
 
 @end
+
+@interface ATSortedMutableArray<__covariant ObjectType> (SaveToFile)
+
+/* Serializes this instance to the specified URL in the NSPropertyList format (using NSPropertyListXMLFormat_v1_0). */
+-(BOOL)writeToURL:(nonnull NSURL*)url error:(NSError*_Nullable*_Nullable)error;
+
+@end
