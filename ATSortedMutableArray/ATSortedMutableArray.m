@@ -214,6 +214,16 @@
                                         passingTest:predicate];
 }
 
+-(id)firstObject
+{
+    return _backingArray.firstObject;
+}
+
+-(id)lastObject
+{
+    return _backingArray.lastObject;
+}
+
 @end
 
 #pragma mark - Replace

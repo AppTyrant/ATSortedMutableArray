@@ -84,6 +84,9 @@
 
 @interface ATSortedMutableArray<__covariant ObjectType> (QueryMethods)
 
+@property (nullable, nonatomic, readonly) ObjectType firstObject;
+@property (nullable, nonatomic, readonly) ObjectType lastObject;
+
 -(NSUInteger)indexOfObject:(nonnull ObjectType)anObject;
 -(NSUInteger)indexOfObject:(nonnull ObjectType)anObject inRange:(NSRange)range;
 -(NSUInteger)indexOfObjectIdenticalTo:(nonnull ObjectType)anObject;
