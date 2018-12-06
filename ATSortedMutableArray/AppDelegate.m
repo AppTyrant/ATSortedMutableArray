@@ -33,12 +33,6 @@
     return self;
 }
 
--(void)applicationDidFinishLaunching:(NSNotification*)aNotification
-{
-    //Insert code here to initialize your application
-   
-}
-
 #pragma mark - NSTableViewDataSource/Delegates
 -(NSInteger)numberOfRowsInTableView:(NSTableView*)tableView
 {
