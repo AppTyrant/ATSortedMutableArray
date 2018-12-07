@@ -56,6 +56,7 @@
     [self.tableView beginUpdates];
     [self.tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:indexAdded] withAnimation:NSTableViewAnimationSlideUp];
     [self.tableView endUpdates];
+    [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexAdded] byExtendingSelection:NO];
 }
 
 @end
