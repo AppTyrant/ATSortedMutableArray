@@ -261,6 +261,30 @@
     }
 }
 
+
+-(NSIndexSet*)insertObjectsFromArray:(NSArray*)arrayOfObjects
+{
+    NSMutableIndexSet *indexSet = [NSMutableIndexSet indexSet];
+    
+    for (id aObjectToAdd in arrayOfObjects)
+    {
+        NSUInteger insertionIndex = [self addObject:aObjectToAdd];
+        
+        if ((indexSet.count > 0)
+            &&
+            (insertionIndex <= indexSet.lastIndex
+            || insertionIndex <= indexSet.firstIndex))
+        {
+            [indexSet shiftIndexesStartingAtIndex:insertionIndex by:1];
+        }
+        
+        //Add the index.
+        [indexSet addIndex:insertionIndex];
+    }
+    
+    return indexSet;
+}
+
 @end
 
 #pragma mark - Remove

@@ -169,6 +169,11 @@
  */
 -(void)addObjectsFromArray:(nonnull NSArray<ObjectType>*)arrayOfObjects;
 
+/**
+ This method is the same as the -addObjectsFromArray: method, only it returns a set of indexes for the inserted objects.
+ */
+-(NSIndexSet*)insertObjectsFromArray:(NSArray<ObjectType>*)arrayOfObjects;
+
 @end
 
 @interface ATSortedMutableArray<__covariant ObjectType> (RemoveObjectMethods)
