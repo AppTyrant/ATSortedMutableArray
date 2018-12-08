@@ -59,4 +59,28 @@
     [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:indexAdded] byExtendingSelection:NO];
 }
 
+-(IBAction)addRandomNumbers:(id)sender
+{
+    NSUInteger randomAmount = arc4random_uniform(10) + 1;
+    
+    NSMutableArray<NSNumber*>*numbersToAdd = [NSMutableArray arrayWithCapacity:randomAmount];
+    for (NSUInteger i = 0; i < randomAmount; i++)
+    {
+        NSUInteger randomNumber = arc4random_uniform(101);
+        [numbersToAdd addObject:@(randomNumber)];
+    }
+   
+    NSIndexSet *indexesAdded = [self.sortedNumbers insertObjectsFromArray:numbersToAdd];
+    NSAssert(indexesAdded.count == numbersToAdd.count, @"Debug this.");
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexes:indexesAdded withAnimation:NSTableViewAnimationSlideUp];
+    [self.tableView endUpdates];
+    [self.tableView selectRowIndexes:indexesAdded byExtendingSelection:NO];
+    
+    //Uncomment below to test that we got the correct indexes.
+    //NSArray *objectsInArray = [self.sortedNumbers objectsAtIndexes:indexesAdded];
+    //[numbersToAdd sortUsingComparator:self.sortedNumbers.comparator];
+    //NSAssert([numbersToAdd isEqualToArray:objectsInArray], @"Failed.");
+}
+
 @end

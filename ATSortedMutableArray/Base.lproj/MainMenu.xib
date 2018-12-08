@@ -679,12 +679,14 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="137" y="140"/>
         </menu>
         <window title="ATSortedMutableArray" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="480" height="360"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -695,7 +697,7 @@
                             <rect key="frame" x="1" y="1" width="478" height="313"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="QKR-Qw-LhV">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="QKR-Qw-LhV">
                                     <rect key="frame" x="0.0" y="0.0" width="478" height="313"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -757,8 +759,8 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ffU-dJ-SaH">
-                        <rect key="frame" x="296" y="5" width="170" height="32"/>
+                    <button toolTip="Add one random number." verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ffU-dJ-SaH">
+                        <rect key="frame" x="14" y="5" width="170" height="32"/>
                         <buttonCell key="cell" type="push" title="Add Random Number" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UPy-7P-OEb">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -767,16 +769,29 @@
                             <action selector="addRandomNumber:" target="Voe-Tx-rLC" id="asn-7b-qzn"/>
                         </connections>
                     </button>
+                    <button toolTip="Add random numbers." verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EtK-dX-G1a">
+                        <rect key="frame" x="289" y="5" width="177" height="32"/>
+                        <buttonCell key="cell" type="push" title="Add Random Numbers" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rlI-c3-tzx">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="addRandomNumbers:" target="Voe-Tx-rLC" id="fju-Hi-9XE"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="8W7-8l-Bjh" secondAttribute="trailing" id="1wE-ei-Zto"/>
                     <constraint firstAttribute="bottom" secondItem="ffU-dJ-SaH" secondAttribute="bottom" constant="12" id="Cvw-Cn-CKw"/>
                     <constraint firstItem="8W7-8l-Bjh" firstAttribute="width" secondItem="EiT-Mj-1SZ" secondAttribute="width" id="H7K-Nk-wRf"/>
-                    <constraint firstItem="ffU-dJ-SaH" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" priority="999" constant="302" id="URf-4C-FDf"/>
+                    <constraint firstItem="ffU-dJ-SaH" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="Wx5-5Z-CrG"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ffU-dJ-SaH" secondAttribute="trailing" constant="20" symbolic="YES" id="YD6-mW-Gai"/>
                     <constraint firstItem="8W7-8l-Bjh" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="aMt-vh-9bC"/>
-                    <constraint firstAttribute="trailing" secondItem="ffU-dJ-SaH" secondAttribute="trailing" constant="20" id="ixy-1W-fOG"/>
+                    <constraint firstAttribute="bottom" secondItem="EtK-dX-G1a" secondAttribute="bottom" constant="12" id="kQd-G4-pLZ"/>
+                    <constraint firstAttribute="trailing" secondItem="EtK-dX-G1a" secondAttribute="trailing" constant="20" symbolic="YES" id="kRZ-q4-Cku"/>
                     <constraint firstAttribute="bottom" secondItem="8W7-8l-Bjh" secondAttribute="bottom" constant="45" id="lP7-T3-Dzg"/>
                     <constraint firstItem="8W7-8l-Bjh" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="s7e-sB-evp"/>
+                    <constraint firstItem="EtK-dX-G1a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ffU-dJ-SaH" secondAttribute="trailing" constant="12" symbolic="YES" id="tMx-px-NP1"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="103" y="481"/>
