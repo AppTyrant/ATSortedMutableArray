@@ -270,6 +270,7 @@
     {
         NSUInteger insertionIndex = [self addObject:aObjectToAdd];
         
+        //If we already added an object at an index less than or equal to the insertion index, shift the indexes greater than or equal to the insertion index by one.
         if ((indexSet.count > 0)
             &&
             (insertionIndex <= indexSet.lastIndex
