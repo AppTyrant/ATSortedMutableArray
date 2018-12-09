@@ -21,9 +21,15 @@ To add an object to the array you use the addObject: method.
 
 This makes it easy to create a sorted collection that will automatically enforce a given sort policy as objects are added. 
 
-You can also add an multiple objects to the array by using the -addObjectsFromArray: method.
+You can also add an multiple objects to the array by using the -addObjectsFromArray: method or the insertObjectsFromArray: method.
 
 ```
 -(void)addObjectsFromArray:(nonnull NSArray<ObjectType>*)arrayOfObjects;
+
+//This method is the same as the -addObjectsFromArray: method, only it returns a set of indexes for the inserted objects.
+-(NSIndexSet*)insertObjectsFromArray:(NSArray<ObjectType>*)arrayOfObjects;
 ```
 See ATSortedMutableArray.h for more.
+
+#### Developer's Website:
+[AppTyrant.com](http://AppTyrant.com)
