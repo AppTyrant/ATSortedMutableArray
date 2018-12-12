@@ -172,7 +172,7 @@
 /**
  This method is the same as the -addObjectsFromArray: method, only it returns a set of indexes for the inserted objects.
  */
--(NSIndexSet*)insertObjectsFromArray:(NSArray<ObjectType>*)arrayOfObjects;
+-(nonnull NSIndexSet*)insertObjectsFromArray:(nonnull NSArray<ObjectType>*)arrayOfObjects;
 
 @end
 
